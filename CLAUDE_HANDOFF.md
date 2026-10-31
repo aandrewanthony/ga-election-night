@@ -5,7 +5,7 @@ A standalone election-night TV app for Georgia's **Tuesday, November 3, 2026** g
 
 The owner asked for this to be **totally separate from Dial TV**, so it is not a Dial TV page or mode. It copies a few of Dial TV's tested pieces (see "Borrowed from Dial TV"); keep the two apps independent.
 
-- Repo: `aandrewanthony/ga-election-night` (private, branch `master`). Local: `C:\Users\RSVP\Documents\ga-election-tv`. Commit author: `Andrew <andrew@studiofarmsny.com>` (set in repo config).
+- Repo: `aandrewanthony/ga-election-night` (**public**, branch `master`; the owner's browser is signed in to GitHub as `studiofarms`, so keep secrets out of it). Local: `C:\Users\RSVP\Documents\ga-election-tv`. Commit author: `Andrew <andrew@studiofarmsny.com>` (set in repo config).
 - Web (results only): Netlify site `ga-election-night` (id `2735d724-7347-4c27-abee-c938e3737f47`) → https://ga-election-night.netlify.app
 - Windows app: `release/GA-Election-Night-<ver>-win.zip` (built locally, not in git).
 
