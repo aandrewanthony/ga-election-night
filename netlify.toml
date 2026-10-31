@@ -1,0 +1,8 @@
+# Web version: results + station guide (IPTV streams need the desktop app).
+[build]
+  publish = "dist"
+  functions = "netlify/functions"
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

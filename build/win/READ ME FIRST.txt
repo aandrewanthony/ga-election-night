@@ -1,0 +1,14 @@
+GA ELECTION NIGHT FOR WINDOWS
+=============================
+
+1. Right-click the zip and choose "Extract All..." (don't run it from inside the zip).
+2. Open the extracted folder and double-click "GA Election Night".
+3. Click "Install". It installs itself for your account with Start menu and desktop
+   shortcuts, then opens. You can delete the zip and extracted folder afterwards.
+
+First run: paste your IPTV .m3u link (the same one Dial TV uses) or open the .m3u file.
+The app finds GPB, WSB (ABC 2), WXIA (NBC 11) and Atlanta CBS on its own; click a
+station's name on any tile to change it.
+
+Uninstalling: Windows Settings > Apps > Installed apps > GA Election Night > Uninstall.
+If Windows SmartScreen shows "Windows protected your PC": click "More info" > "Run anyway".

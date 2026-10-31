@@ -1,0 +1,55 @@
+{
+  "name": "ga-election-night",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "productName": "GA Election Night",
+  "description": "Georgia election night: GPB, ABC, NBC and CBS side by side with live Secretary of State results",
+  "author": "Studio Farms",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit",
+    "desktop": "npm run build && electron .",
+    "icons": "electron scripts/make-icons.cjs",
+    "dist:win": "npm run build && electron-builder --win --publish never"
+  },
+  "dependencies": {
+    "hls.js": "^1.5.17",
+    "mpegts.js": "^1.8.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "33.2.0",
+    "electron-builder": "25.1.8",
+    "ffmpeg-static": "^5.2.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.1"
+  },
+  "engines": { "node": ">=20" },
+  "build": {
+    "appId": "com.studiofarms.gaelection",
+    "productName": "GA Election Night",
+    "copyright": "Studio Farms",
+    "directories": { "output": "release", "buildResources": "build" },
+    "files": ["electron/**", "dist/**", "package.json", "!**/*.map", "!node_modules/**/*"],
+    "asar": false,
+    "win": {
+      "target": [{ "target": "zip", "arch": ["x64"] }],
+      "icon": "build/icon.png",
+      "signAndEditExecutable": false,
+      "extraResources": [
+        { "from": "vendor/ffmpeg/win32-x64", "to": "ffmpeg", "filter": ["ffmpeg.exe"] },
+        { "from": "build/icon.ico", "to": "icon.ico" }
+      ],
+      "artifactName": "GA-Election-Night-${version}-win.${ext}",
+      "extraFiles": [{ "from": "build/win/READ ME FIRST.txt", "to": "READ ME FIRST.txt" }]
+    }
+  }
+}
